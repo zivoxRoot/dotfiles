@@ -32,10 +32,10 @@
     home-manager,
     zen-browser,
     ...
-  }@inputs: {
+  } @ inputs: {
     nixosConfigurations.theophile = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         stylix.nixosModules.stylix
         ./hosts/laptop/configuration.nix
@@ -46,7 +46,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
 
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {inherit inputs;};
 
             users.theophile = {
               imports = [

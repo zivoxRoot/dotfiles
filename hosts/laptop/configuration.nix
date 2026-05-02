@@ -1,8 +1,10 @@
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-  [
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
     ./hardware.nix
 
     # Desktop
@@ -50,7 +52,7 @@
   users.users.theophile = {
     isNormalUser = true;
     description = "theophile";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
 

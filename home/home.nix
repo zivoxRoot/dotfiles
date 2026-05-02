@@ -1,6 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   home.username = "theophile";
   home.homeDirectory = "/home/theophile";
 
@@ -12,11 +16,11 @@
   ];
 
   home.packages = with pkgs; [
-    nixfmt-tree
+    nautilus
+    alejandra
     pre-commit
     vim
-    firefox
-    fuzzel
+    rofi
     waybar
     xwayland-satellite
     swww

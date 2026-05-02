@@ -1,11 +1,14 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.zen-browser = {
     enable = true;
     setAsDefaultBrowser = true;
     enablePrivateDesktopEntry = true;
-    nativeMessagingHosts = [ pkgs.firefoxpwa ];
+    nativeMessagingHosts = [pkgs.firefoxpwa];
 
     profiles.${config.home.username} = rec {
       isDefault = true;
@@ -208,18 +211,17 @@
     };
   };
 
-  stylix.targets.zen-browser.profileNames = [ config.home.username ];
+  stylix.targets.zen-browser.profileNames = [config.home.username];
 
   # Open files with the browser
-  xdg.mimeApps =
-    let
+  xdg.mimeApps = let
     associations = builtins.listToAttrs (
-        map
-        (name: {
-         inherit name;
-         value = "zen-beta.desktop";
-         })
-        [
+      map
+      (name: {
+        inherit name;
+        value = "zen-beta.desktop";
+      })
+      [
         "application/x-extension-shtml"
         "application/x-extension-xhtml"
         "application/x-extension-html"
@@ -235,10 +237,9 @@
         "application/json"
         "text/plain"
         "text/html"
-        ]
-        );
-  in
-  {
+      ]
+    );
+  in {
     enable = true;
     associations.added = associations;
     defaultApplications = associations;
