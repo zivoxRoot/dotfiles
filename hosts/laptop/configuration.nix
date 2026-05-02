@@ -13,6 +13,9 @@
     # Services
     ../../modules/services/ssh.nix
     ../../modules/services/greeter.nix
+
+    # System
+    ../../modules/system/nix-cache.nix
   ];
 
   # Bootloader.

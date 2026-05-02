@@ -16,6 +16,7 @@
   ];
 
   home.packages = with pkgs; [
+    inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
     nautilus
     alejandra
     pre-commit
@@ -26,7 +27,6 @@
     swww
     brightnessctl
     fastfetch
-    telegram-desktop
   ];
 
   home.stateVersion = "25.11";

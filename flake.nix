@@ -23,12 +23,19 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ayugram-desktop = {
+      type = "git";
+      submodules = true;
+      url = "https://github.com/ndfined-crp/ayugram-desktop/";
+    };
   };
 
   outputs = {
     self,
     stylix,
     nixpkgs,
+    ayugram-desktop,
     home-manager,
     zen-browser,
     ...
