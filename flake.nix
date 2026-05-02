@@ -29,6 +29,11 @@
       submodules = true;
       url = "https://github.com/ndfined-crp/ayugram-desktop/";
     };
+
+    gazelle = {
+      url = "github:Zeus-Deus/gazelle-tui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,6 +41,7 @@
     stylix,
     nixpkgs,
     ayugram-desktop,
+    gazelle,
     home-manager,
     zen-browser,
     ...
@@ -57,6 +63,7 @@
 
             users.theophile = {
               imports = [
+                gazelle.homeModules.gazelle
                 ./home/home.nix
               ];
             };

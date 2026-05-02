@@ -18,6 +18,8 @@
     ../../modules/system/nix-cache.nix
   ];
 
+  hardware.bluetooth.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -27,7 +29,12 @@
 
   networking.hostName = "nixos";
 
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
+  networking.wireless.iwd = {
+    enable = true;
+    settings.General.EnableNetworkConfiguration = true;
+  };
+  # networking.dhcpcd.enable = true;
 
   time.timeZone = "Europe/Paris";
 
