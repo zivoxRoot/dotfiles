@@ -9,10 +9,10 @@
   home.homeDirectory = "/home/theophile";
 
   imports = [
-    ./programs/git.nix
-    ./programs/zen.nix
-    ./programs/foot.nix
     inputs.zen-browser.homeModules.beta
+    ./programs/zen.nix
+    ./programs/git.nix
+    ./programs/foot.nix
   ];
 
   home.packages = with pkgs; [
