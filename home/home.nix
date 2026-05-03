@@ -5,9 +5,6 @@
   inputs,
   ...
 }: {
-  home.username = "theophile";
-  home.homeDirectory = "/home/theophile";
-
   imports = [
     inputs.zen-browser.homeModules.beta
 
@@ -18,7 +15,10 @@
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/niri
+    ./programs/bash.nix
   ];
 
+  home.username = "theophile";
+  home.homeDirectory = "/home/theophile";
   home.stateVersion = "25.11";
 }
