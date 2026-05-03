@@ -14,6 +14,7 @@
     ./programs/git.nix
     ./programs/foot.nix
     ./programs/waybar.nix
+    ./programs/niri.nix
   ];
 
   home.packages = with pkgs; [

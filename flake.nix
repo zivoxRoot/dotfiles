@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +45,7 @@
     self,
     stylix,
     nixpkgs,
+    niri,
     ayugram-desktop,
     gazelle,
     home-manager,

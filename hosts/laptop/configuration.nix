@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    inputs.niri.nixosModules.niri
+
     ./hardware.nix
 
     # Desktop
@@ -17,6 +19,8 @@
     # System
     ../../modules/system/nix-cache.nix
   ];
+
+  programs.niri.enable = true;
 
   hardware.bluetooth.enable = true;
 
@@ -68,7 +72,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.niri.enable = true;
+  # programs.niri.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"

@@ -1,0 +1,235 @@
+{...}: {
+  programs.niri.settings = {
+    input.keyboard.xkb.layout = "us";
+    input.keyboard.xkb.options = "caps:swapescape,compose:ralt";
+    input.touchpad.natural-scroll = true;
+    input.focus-follows-mouse = {
+      enable = true;
+      max-scroll-amount = "0%";
+    };
+    input.warp-mouse-to-focus.enable = true;
+
+    hotkey-overlay.skip-at-startup = true;
+
+    prefer-no-csd = true;
+
+    spawn-at-startup = [
+      {argv = ["xwayland-satellite"];}
+      {argv = ["waybar"];}
+      {argv = ["swww-daemon"];}
+    ];
+
+    # Outputs
+    outputs."eDP-1" = {
+      mode = {
+        width = 1920;
+        height = 1080;
+        refresh = 120.030;
+      };
+      position = {
+        x = 1080;
+        y = 0;
+      };
+      scale = 1.3;
+    };
+
+    outputs."HDMI-A-2" = {
+      mode = {
+        width = 3840;
+        height = 2160;
+        refresh = 29.281;
+      };
+      scale = 2.5;
+    };
+
+    # Cursor
+    cursor = {
+      hide-after-inactive-ms = 3000;
+      hide-when-typing = true;
+    };
+
+    # Layout
+    layout = {
+      # gaps = 12;
+      focus-ring.width = 2;
+
+      background-color = "transparent";
+      preset-column-widths = [
+        {proportion = 1. / 3.;}
+        {proportion = 1. / 2.;}
+        {proportion = 2. / 3.;}
+      ];
+    };
+
+    gestures.hot-corners.enable = false;
+
+    window-rules = [
+      {
+        matches = [
+          {
+            app-id = "firefox$";
+            title = "^Picture-in-Picture$";
+          }
+        ];
+
+        open-floating = true;
+        default-floating-position = {
+          relative-to = "bottom-right";
+          x = 100;
+          y = 100;
+        };
+        tiled-state = true;
+      }
+    ];
+
+    layer-rules = [
+      {
+        matches = [
+          {namespace = "^swww-daemon$";}
+        ];
+
+        place-within-backdrop = true;
+      }
+    ];
+
+    binds = {
+      "Mod+Shift+Slash".action.show-hotkey-overlay = [];
+
+      "Mod+T".action.spawn = "foot";
+      "Mod+Space".action.spawn = ["rofi" "-show" "drun"];
+      "Mod+W".action.spawn = ["pkill" "waybar" "||" "waybar"];
+
+      "XF86AudioRaiseVolume" = {
+        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];
+        allow-when-locked = true;
+        cooldown-ms = 150;
+      };
+      "XF86AudioLowerVolume" = {
+        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"];
+        allow-when-locked = true;
+        cooldown-ms = 150;
+      };
+      "XF86AudioMute" = {
+        action.spawn = ["wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"];
+        allow-when-locked = true;
+      };
+      "XF86AudioMicMute" = {
+        action.spawn = ["wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"];
+        allow-when-locked = true;
+      };
+
+      "XF86MonBrightnessUp" = {
+        action.spawn = ["brightnessctl" "--class=backlight" "set" "+10%"];
+        allow-when-locked = true;
+      };
+      "XF86MonBrightnessDown" = {
+        action.spawn = ["brightnessctl" "--class=backlight" "set" "10%-"];
+        allow-when-locked = true;
+      };
+
+      "Mod+O".action.toggle-overview = [];
+      "Mod+Q".action.close-window = [];
+
+      # Focus windows
+      "Mod+H".action.focus-column-left = [];
+      "Mod+L".action.focus-column-right = [];
+      "Mod+K".action.focus-window-or-workspace-up = [];
+      "Mod+J".action.focus-window-or-workspace-down = [];
+
+      # Move windows
+      "Mod+Shift+H".action.move-column-left = [];
+      "Mod+Shift+L".action.move-column-right = [];
+      "Mod+Shift+K".action.move-window-up-or-to-workspace-up = [];
+      "Mod+Shift+J".action.move-window-down-or-to-workspace-down = [];
+
+      # Focus monitors
+      "Mod+Alt+H".action.focus-monitor-left = [];
+      "Mod+Alt+L".action.focus-monitor-right = [];
+      "Mod+Alt+K".action.focus-monitor-up = [];
+      "Mod+Alt+J".action.focus-monitor-down = [];
+
+      # Move windows to monitors
+      "Mod+Shift+Alt+H".action.move-window-to-monitor-left = [];
+      "Mod+Shift+Alt+L".action.move-window-to-monitor-right = [];
+      "Mod+Shift+Alt+K".action.move-window-to-monitor-up = [];
+      "Mod+Shift+Alt+J".action.move-window-to-monitor-down = [];
+
+      # Focus and move windows with mod + scroll (+ shift)
+      "Mod+TouchpadScrollDown" = {
+        action.focus-workspace-down = [];
+        cooldown-ms = 150;
+      };
+      "Mod+TouchpadScrollUp" = {
+        action.focus-workspace-up = [];
+        cooldown-ms = 150;
+      };
+      "Mod+Shift+TouchpadScrollDown" = {
+        action.move-column-to-workspace-down = [];
+        cooldown-ms = 150;
+      };
+      "Mod+Shift+TouchpadScrollUp" = {
+        action.move-column-to-workspace-up = [];
+        cooldown-ms = 150;
+      };
+
+      # Focus workspaces
+      "Mod+1".action.focus-workspace = 1;
+      "Mod+2".action.focus-workspace = 2;
+      "Mod+3".action.focus-workspace = 3;
+      "Mod+4".action.focus-workspace = 4;
+      "Mod+5".action.focus-workspace = 5;
+      "Mod+6".action.focus-workspace = 6;
+      "Mod+7".action.focus-workspace = 7;
+      "Mod+8".action.focus-workspace = 8;
+      "Mod+9".action.focus-workspace = 9;
+
+      # Move window to workspace
+      "Mod+Shift+1".action.move-window-to-workspace = 1;
+      "Mod+Shift+2".action.move-window-to-workspace = 2;
+      "Mod+Shift+3".action.move-window-to-workspace = 3;
+      "Mod+Shift+4".action.move-window-to-workspace = 4;
+      "Mod+Shift+5".action.move-window-to-workspace = 5;
+      "Mod+Shift+6".action.move-window-to-workspace = 6;
+      "Mod+Shift+7".action.move-window-to-workspace = 7;
+      "Mod+Shift+8".action.move-window-to-workspace = 8;
+      "Mod+Shift+9".action.move-window-to-workspace = 9;
+
+      # Switch to previous workspace back-and-forth
+      "Mod+Tab".action.focus-workspace-previous = [];
+
+      "Mod+BracketLeft".action.consume-or-expel-window-left = [];
+      "Mod+BracketRight".action.consume-or-expel-window-right = [];
+
+      "Mod+Comma".action.consume-window-into-column = [];
+      "Mod+Period".action.expel-window-from-column = [];
+
+      "Mod+R".action.switch-preset-column-width = [];
+      "Mod+Shift+R".action.switch-preset-window-height = [];
+      "Mod+F".action.maximize-column = [];
+      "Mod+Shift+F".action.fullscreen-window = [];
+
+      "Mod+Ctrl+F".action.expand-column-to-available-width = [];
+
+      "Mod+C".action.center-column = [];
+      "Mod+Ctrl+C".action.center-visible-columns = [];
+
+      "Mod+Minus".action.set-column-width = "+10%";
+      "Mod+Equal".action.set-column-width = "-10%";
+      "Mod+Shift+Minus".action.set-window-height = "+10%";
+      "Mod+Shift+Equal".action.set-window-height = "-10%";
+
+      "Mod+P".action.toggle-column-tabbed-display = [];
+
+      "Print".action.screenshot = [];
+      "Ctrl+Print".action.screenshot-screen = [];
+      "Alt+Print".action.screenshot-window = [];
+
+      "Mod+Escape" = {
+        allow-inhibiting = false;
+        action.toggle-keyboard-shortcuts-inhibit = [];
+      };
+
+      "Mod+Delete".action.quit.skip-confirmation = false;
+    };
+  };
+}
