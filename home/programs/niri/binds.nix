@@ -1,101 +1,10 @@
 {...}: {
   programs.niri.settings = {
-    input.keyboard.xkb.layout = "us";
-    input.keyboard.xkb.options = "caps:swapescape,compose:ralt";
-    input.touchpad.natural-scroll = true;
-    input.focus-follows-mouse = {
-      enable = true;
-      max-scroll-amount = "0%";
-    };
-    input.warp-mouse-to-focus.enable = true;
-
-    hotkey-overlay.skip-at-startup = true;
-
-    prefer-no-csd = true;
-
-    spawn-at-startup = [
-      {argv = ["xwayland-satellite"];}
-      {argv = ["waybar"];}
-      {argv = ["swww-daemon"];}
-    ];
-
-    # Outputs
-    outputs."eDP-1" = {
-      mode = {
-        width = 1920;
-        height = 1080;
-        refresh = 120.030;
-      };
-      position = {
-        x = 1080;
-        y = 0;
-      };
-      scale = 1.3;
-    };
-
-    outputs."HDMI-A-2" = {
-      mode = {
-        width = 3840;
-        height = 2160;
-        refresh = 29.281;
-      };
-      scale = 2.5;
-    };
-
-    # Cursor
-    cursor = {
-      hide-after-inactive-ms = 3000;
-      hide-when-typing = true;
-    };
-
-    # Layout
-    layout = {
-      # gaps = 12;
-      focus-ring.width = 2;
-
-      background-color = "transparent";
-      preset-column-widths = [
-        {proportion = 1. / 3.;}
-        {proportion = 1. / 2.;}
-        {proportion = 2. / 3.;}
-      ];
-    };
-
-    gestures.hot-corners.enable = false;
-
-    window-rules = [
-      {
-        matches = [
-          {
-            app-id = "firefox$";
-            title = "^Picture-in-Picture$";
-          }
-        ];
-
-        open-floating = true;
-        default-floating-position = {
-          relative-to = "bottom-right";
-          x = 100;
-          y = 100;
-        };
-        tiled-state = true;
-      }
-    ];
-
-    layer-rules = [
-      {
-        matches = [
-          {namespace = "^swww-daemon$";}
-        ];
-
-        place-within-backdrop = true;
-      }
-    ];
-
     binds = {
       "Mod+Shift+Slash".action.show-hotkey-overlay = [];
 
       "Mod+T".action.spawn = "foot";
+      "Mod+B".action.spawn = "beta";
       "Mod+Space".action.spawn = ["rofi" "-show" "drun"];
       "Mod+W".action.spawn = ["pkill" "waybar" "||" "waybar"];
 

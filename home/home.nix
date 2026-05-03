@@ -10,27 +10,14 @@
 
   imports = [
     inputs.zen-browser.homeModules.beta
+
+    ./packages.nix
+
     ./programs/zen.nix
     ./programs/git.nix
     ./programs/foot.nix
     ./programs/waybar.nix
-    ./programs/niri.nix
-  ];
-
-  home.packages = with pkgs; [
-    inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
-    nautilus
-    alejandra
-    pre-commit
-    vim
-    rofi
-    xwayland-satellite
-    swww
-    brightnessctl
-    fastfetch
-    bluez
-    bluetui
-    impala
+    ./programs/niri
   ];
 
   home.stateVersion = "25.11";
