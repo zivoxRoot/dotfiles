@@ -19,7 +19,6 @@
 
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
-    inputs.gazelle.packages.${pkgs.system}.default
     nautilus
     alejandra
     pre-commit

@@ -72,8 +72,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # programs.niri.enable = true;
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
