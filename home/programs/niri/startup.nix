@@ -4,6 +4,7 @@
       {argv = ["xwayland-satellite"];}
       {argv = ["waybar"];}
       {argv = ["swww-daemon"];}
+      {argv = ["dunst"];}
     ];
   };
 }

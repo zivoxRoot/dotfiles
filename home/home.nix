@@ -16,6 +16,7 @@
     ./programs/waybar.nix
     ./programs/niri
     ./programs/bash.nix
+    ./programs/dunst.nix
   ];
 
   home.username = "theophile";
