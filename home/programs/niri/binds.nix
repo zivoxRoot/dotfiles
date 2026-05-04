@@ -11,6 +11,10 @@
       "Mod+Ctrl+B".action.spawn = ["foot" "--app-id=tui-app" "bluetui"];
       "Mod+E".action.spawn = ["foot" "--app-id=tui-app" "yazi"];
 
+      "Mod+N".action.spawn = ["swaync-client" "toggle-panel" "-sw"];
+      "Mod+Ctrl+N".action.spawn = ["swaync-client" "toggle-dnd" "-sw"];
+      "Mod+Shift+N".action.spawn = ["swaync-client" "--close-all"];
+
       "XF86AudioRaiseVolume" = {
         action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];
         allow-when-locked = true;
