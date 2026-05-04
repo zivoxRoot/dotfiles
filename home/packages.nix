@@ -6,7 +6,9 @@
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
     ani-cli
+    yazi
     yt-dlp
+    libnotify
     mpv
     nautilus
     alejandra

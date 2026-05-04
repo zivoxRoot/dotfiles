@@ -1,6 +1,7 @@
 {...}: {
   programs.niri.settings = {
     window-rules = [
+      # Firefox picture in picture
       {
         matches = [
           {
@@ -16,6 +17,17 @@
           y = 100;
         };
         tiled-state = true;
+      }
+
+      # TUI app float center
+      {
+        matches = [
+          {
+            app-id = "tui-app";
+          }
+        ];
+
+        open-floating = true;
       }
     ];
 

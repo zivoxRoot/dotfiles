@@ -4,9 +4,12 @@
       "Mod+Shift+Slash".action.show-hotkey-overlay = [];
 
       "Mod+T".action.spawn = "foot";
-      "Mod+B".action.spawn = "beta";
+      "Mod+B".action.spawn = "zen-beta";
       "Mod+Space".action.spawn = ["rofi" "-show" "drun"];
       "Mod+W".action.spawn = ["pkill" "waybar" "||" "waybar"];
+      "Mod+Ctrl+W".action.spawn = ["foot" "--app-id=tui-app" "impala"];
+      "Mod+Ctrl+B".action.spawn = ["foot" "--app-id=tui-app" "bluetui"];
+      "Mod+E".action.spawn = ["foot" "--app-id=tui-app" "yazi"];
 
       "XF86AudioRaiseVolume" = {
         action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];
