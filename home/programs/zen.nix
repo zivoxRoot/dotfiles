@@ -20,6 +20,11 @@
         "zen.view.compact.animate-sidebar" = true;
         "zen.welcome-screen.seen" = true;
         "zen.urlbar.behavior" = "float";
+
+        # Not sure it works...
+        "browser.translations.enable" = false;
+        "browser.translations.automaticallyPopup" = false;
+        "layout.spellcheckdefault" = false;
       };
 
       mods = [
@@ -56,12 +61,18 @@
           position = 102;
           isEssential = true;
         };
+        "Capacities" = {
+          id = "43e8a117-5a11-4827-9l45-29c8e8dd3bf7";
+          url = "https://app.capacities.io/3e16f86f-bf6f-465d-b41f-0d8cb023e0ef/RootPage";
+          position = 103;
+          isEssential = true;
+        };
 
         # Programming pins
         "Github" = {
           id = "42e8a419-5a14-4827-9545-91c8e8dd3bf6";
           url = "https://github.com";
-          position = 103;
+          position = 104;
           workspace = spaces."Programming".id;
           isEssential = false;
         };
@@ -71,13 +82,13 @@
           isGroup = true;
           isFolderCollapsed = true;
           editedTitle = true;
-          position = 104;
+          position = 105;
           workspace = spaces."Programming".id;
         };
         "Packages" = {
           id = "42e8a419-5a34-4823-9749-91c8e8yd3if6";
           url = "https://search.nixos.org/packages";
-          position = 105;
+          position = 106;
           workspace = spaces."Programming".id;
           isEssential = false;
           folderParentId = "Nix";
@@ -85,7 +96,7 @@
         "Wiki" = {
           id = "42e8a419-5a14-4823-9745-91c8e8dd3bf6";
           url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
-          position = 106;
+          position = 107;
           workspace = spaces."Programming".id;
           isEssential = false;
           folderParentId = "Nix";
@@ -93,7 +104,7 @@
         "Nix language" = {
           id = "42e8a419-5a34-482u-9743-91c8e8yd3if7";
           url = "https://nix.dev/tutorials/nix-language.html";
-          position = 107;
+          position = 108;
           workspace = spaces."Programming".id;
           isEssential = false;
           folderParentId = "Nix";
@@ -103,42 +114,42 @@
         "CNED" = {
           id = "42i8a219-5a14-4827-9845-91c8e8dd3bf6";
           url = "https://eformation.cned.fr";
-          position = 103;
+          position = 104;
           workspace = spaces."School".id;
           isEssential = false;
         };
         "Agenda" = {
           id = "42u4a219-5a11-4827-9825-91b8e8dd3bf3";
           url = "https://calendar.google.com/calendar/u/0/r?pli=1";
-          position = 104;
+          position = 105;
           workspace = spaces."School".id;
           isEssential = false;
         };
         "Mail" = {
           id = "42u4a219-5a11-4827-9845-91c8e8dd3bf6";
           url = "https://mail.google.com/mail/u/0/#inbox";
-          position = 105;
+          position = 106;
           workspace = spaces."School".id;
           isEssential = false;
         };
         "Drive" = {
           id = "42u4a219-5a11-4822-9845-91c5e8dd2bf7";
           url = "https://drive.google.com/drive/home";
-          position = 106;
+          position = 107;
           workspace = spaces."School".id;
           isEssential = false;
         };
         "Avancement" = {
           id = "42u4a219-5v11-4822-9843-91c5e8dd2bf9";
           url = "https://docs.google.com/spreadsheets/d/1W27Ia6laPlN9cjmYG3Y0GgdZU3VVZ8jmgIpBOaIHFhQ/edit?gid=0#gid=0";
-          position = 107;
+          position = 108;
           workspace = spaces."School".id;
           isEssential = false;
         };
         "Révision" = {
           id = "22u4a519-5i11-4822-9843-91c5e8dd2bf9";
           url = "https://docs.google.com/spreadsheets/d/1TnK8_toCxk1Vf1L3_XwzBYP6E5l13J-PPPnXq4-IPdY/edit?pli=1&gid=0#gid=0";
-          position = 108;
+          position = 109;
           workspace = spaces."School".id;
           isEssential = false;
         };
