@@ -16,7 +16,6 @@
     ./programs/waybar.nix
     ./programs/niri
     ./programs/bash.nix
-    #     ./programs/dunst.nix
     ./programs/swaync.nix
   ];
 

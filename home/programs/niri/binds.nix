@@ -6,14 +6,14 @@
       "Mod+T".action.spawn = "foot";
       "Mod+B".action.spawn = "zen-beta";
       "Mod+Space".action.spawn = ["rofi" "-show" "drun"];
-      "Mod+W".action.spawn = ["pkill" "waybar" "||" "waybar"];
-      "Mod+Ctrl+W".action.spawn = ["foot" "--app-id=tui-app" "impala"];
-      "Mod+Ctrl+B".action.spawn = ["foot" "--app-id=tui-app" "bluetui"];
-      "Mod+E".action.spawn = ["foot" "--app-id=tui-app" "yazi"];
+      "Mod+W".action.spawn-sh = ["pkill waybar || waybar"];
+      "Mod+Ctrl+W".action.spawn-sh = ["foot --app-id=tui-app impala"];
+      "Mod+Ctrl+B".action.spawn-sh = ["foot --app-id=tui-app bluetui"];
+      "Mod+E".action.spawn-sh = ["foot --app-id=tui-app yazi"];
 
-      "Mod+N".action.spawn = ["swaync-client" "toggle-panel" "-sw"];
-      "Mod+Ctrl+N".action.spawn = ["swaync-client" "toggle-dnd" "-sw"];
-      "Mod+Shift+N".action.spawn = ["swaync-client" "--close-all"];
+      "Mod+N".action.spawn-sh = ["swaync-client --toggle-panel -sw"];
+      "Mod+Ctrl+N".action.spawn-sh = ["swaync-client --toggle-dnd -sw"];
+      "Mod+Shift+N".action.spawn-sh = ["swaync-client --close-all"];
 
       "XF86AudioRaiseVolume" = {
         action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];

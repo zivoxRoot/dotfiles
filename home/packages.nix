@@ -22,5 +22,6 @@
     bluez
     bluetui
     impala
+    unzip
   ];
 }
