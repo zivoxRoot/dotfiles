@@ -25,6 +25,17 @@
         allow-when-locked = true;
         cooldown-ms = 150;
       };
+      # Precise controls
+      "Mod+XF86AudioRaiseVolume" = {
+        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "-l" "1.0"];
+        allow-when-locked = true;
+        cooldown-ms = 50;
+      };
+      "Mod+XF86AudioLowerVolume" = {
+        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"];
+        allow-when-locked = true;
+        cooldown-ms = 50;
+      };
       "XF86AudioMute" = {
         action.spawn = ["wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"];
         allow-when-locked = true;
@@ -37,10 +48,23 @@
       "XF86MonBrightnessUp" = {
         action.spawn = ["brightnessctl" "--class=backlight" "set" "+10%"];
         allow-when-locked = true;
+        cooldown-ms = 250;
       };
       "XF86MonBrightnessDown" = {
         action.spawn = ["brightnessctl" "--class=backlight" "set" "10%-"];
         allow-when-locked = true;
+        cooldown-ms = 250;
+      };
+      # Precise control
+      "Mod+XF86MonBrightnessUp" = {
+        action.spawn = ["brightnessctl" "--class=backlight" "set" "+1%"];
+        allow-when-locked = true;
+        cooldown-ms = 50;
+      };
+      "Mod+XF86MonBrightnessDown" = {
+        action.spawn = ["brightnessctl" "--class=backlight" "set" "1%-"];
+        allow-when-locked = true;
+        cooldown-ms = 50;
       };
 
       "Mod+O".action.toggle-overview = [];
