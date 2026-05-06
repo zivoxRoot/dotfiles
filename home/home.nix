@@ -10,6 +10,8 @@
 
     ./packages.nix
 
+    ./scripts
+
     ./programs/zen.nix
     ./programs/git.nix
     ./programs/foot.nix
@@ -21,5 +23,12 @@
 
   home.username = "theophile";
   home.homeDirectory = "/home/theophile";
+
+  home.sessionVariables = {
+    MANPAGER = "vim +Man!";
+    NIXOS_OZONE_WL = "1";
+    EDITOR = "vim";
+  };
+
   home.stateVersion = "25.11";
 }

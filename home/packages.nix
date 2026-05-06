@@ -6,6 +6,8 @@
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
     ani-cli
+    tree
+    zathura
     yazi
     yt-dlp
     libnotify

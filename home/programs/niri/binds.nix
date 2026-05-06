@@ -45,24 +45,29 @@
         allow-when-locked = true;
       };
 
+      # Brightness
       "XF86MonBrightnessUp" = {
-        action.spawn = ["brightnessctl" "--class=backlight" "set" "+10%"];
+        # action.spawn = ["~/dotfiles/brightness.sh" "+10"];
+        action.spawn = ["brightness-osd" "+10"];
         allow-when-locked = true;
         cooldown-ms = 250;
       };
       "XF86MonBrightnessDown" = {
-        action.spawn = ["brightnessctl" "--class=backlight" "set" "10%-"];
+        # action.spawn = ["~/dotfiles/brightness.sh" "-10"];
+        action.spawn = ["brightness-osd" "-10"];
         allow-when-locked = true;
         cooldown-ms = 250;
       };
       # Precise control
       "Mod+XF86MonBrightnessUp" = {
-        action.spawn = ["brightnessctl" "--class=backlight" "set" "+1%"];
+        # action.spawn = ["~/dotfiles/brightness.sh" "+1"];
+        action.spawn = ["brightness-osd" "+1"];
         allow-when-locked = true;
         cooldown-ms = 50;
       };
       "Mod+XF86MonBrightnessDown" = {
-        action.spawn = ["brightnessctl" "--class=backlight" "set" "1%-"];
+        # action.spawn = ["~/dotfiles/brightness.sh" "-1"];
+        action.spawn = ["brightness-osd" "-1"];
         allow-when-locked = true;
         cooldown-ms = 50;
       };
