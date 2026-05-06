@@ -16,23 +16,28 @@
       "Mod+Shift+N".action.spawn-sh = ["swaync-client --close-all"];
 
       "XF86AudioRaiseVolume" = {
-        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];
+        # action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"];
+        action.spawn = ["volume-osd" "+5"];
         allow-when-locked = true;
         cooldown-ms = 150;
       };
       "XF86AudioLowerVolume" = {
-        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"];
+        # action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"];
+        action.spawn = ["volume-osd" "-5"];
         allow-when-locked = true;
         cooldown-ms = 150;
       };
       # Precise controls
       "Mod+XF86AudioRaiseVolume" = {
-        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "-l" "1.0"];
+        # action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "-l" "1.0"];
+        # action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"];
+        action.spawn = ["volume-osd" "+1"];
         allow-when-locked = true;
         cooldown-ms = 50;
       };
       "Mod+XF86AudioLowerVolume" = {
-        action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"];
+        # action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"];
+        action.spawn = ["volume-osd" "-1"];
         allow-when-locked = true;
         cooldown-ms = 50;
       };
