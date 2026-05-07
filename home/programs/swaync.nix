@@ -3,42 +3,40 @@
     enable = true;
 
     settings = {
-      positionX = "right";
+      positionX = "center";
       positionY = "top";
-      timeout = 5;
-      timeout-low = 3;
-      timeout-critical = 10;
-      control-center-margin-top = 0;
-      control-center-margin-bottom = 0;
-      control-center-margin-right = 0;
-      control-center-margin-left = 0;
-      notification-window-width = 350;
-      control-center-width = 300;
-      fit-to-screen = true;
+      cssPriority = "user";
+      control-center-width = 450;
+      fit-to-screen = false;
       layer = "overlay";
       control-center-layer = "top";
+
+      notification-window-width = 350;
+      notification-icon-size = 64;
+      notification-body-image-height = 100;
+      notification-body-image-width = 200;
+      notification-inline-replies = true;
+      notification-2fa-action = false;
+
+      timeout = 5;
+      timeout-low = 3;
+      timeout-critical = 0;
+
+      transition-time = 200;
+      keyboard-shortcuts = true;
       layer-shell = true;
-      cssPriority = "user";
       hide-on-action = false;
       script-fail-notify = true;
       ignore-gtk-theme = true;
+      text-empty = "No Notifications";
+
       widgets = [
-        "dnd"
         "mpris"
-        "volume"
-        "backlight"
         "notifications"
       ];
       widget-config = {
         mpris = {
           image-size = 96;
-          image-radius = 12;
-        };
-        volume = {
-          label = "󰕾";
-        };
-        backlight = {
-          label = "";
         };
       };
     };
@@ -61,6 +59,7 @@
           border-radius: 0px;
           margin: 16px;  /* Control center margin */
           padding: 12px;
+          border: 3px solid @base05;
         }
 
         /* --- Notifications in Control Center --- */
