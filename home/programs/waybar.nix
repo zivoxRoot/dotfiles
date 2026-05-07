@@ -8,21 +8,9 @@
         position = "top";
         spacing = 10;
 
-        modules-left = ["niri/workspaces"];
-        modules-center = ["clock" "mpris"];
-        modules-right = ["pulseaudio" "network" "bluetooth" "battery"];
-
-        "clock" = {
-          format = "{:%R}";
-          tooltip-format = "<small>{calendar}</small>";
-          calendar = {
-            mode = "month";
-            week-pos = "right";
-            format = {
-              today = "<span><b><u>{}</u></b></span>";
-            };
-          };
-        };
+        modules-left = ["niri/workspaces" "mpris"];
+        modules-center = ["clock"];
+        modules-right = ["custom/notification" "pulseaudio" "network" "bluetooth" "battery"];
 
         "mpris" = {
           format = "{player_icon} {artist} - {title}";
@@ -43,6 +31,39 @@
           on-right-click = "playerctl next";
           on-scroll-up = "playerctl previous";
           on-scroll-down = "playerctl position 10+";
+        };
+
+        "clock" = {
+          format = "{:%R}";
+          tooltip-format = "<small>{calendar}</small>";
+          calendar = {
+            mode = "month";
+            week-pos = "right";
+            format = {
+              today = "<span><b><u>{}</u></b></span>";
+            };
+          };
+        };
+
+        "custom/notification" = {
+          tooltip = true;
+          format = "<span>{icon} {0}</span>";
+          format-icons = {
+            notification = "󱅫";
+            none = "󰂜";
+            dnd-notification = "󰂠";
+            dnd-none = "󰪓";
+            inhibited-notification = "󰂛";
+            inhibited-none = "󰪑";
+            dnd-inhibited-notification = "󰂛";
+            dnd-inhibited-none = "󰪑";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
         };
 
         "pulseaudio" = {

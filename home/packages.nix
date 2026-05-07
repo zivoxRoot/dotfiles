@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
+    playerctl
     ani-cli
     tree
     zathura
