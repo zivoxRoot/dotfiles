@@ -46,7 +46,7 @@
         };
 
         "pulseaudio" = {
-          format = "{icon} {volume}%";
+          format = "{icon} {volume}";
           format-muted = " ";
           format-icons = ["" "" ""];
           tooltip = false;
@@ -56,7 +56,7 @@
 
         "network" = {
           format-disconnected = "󰤫";
-          format-wifi = "{icon} {signalStrength}%";
+          format-wifi = "{icon} {signalStrength}";
           format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           format-ethernet = "󰈀";
           format-linked = "{ifname} 󰈀";
@@ -72,7 +72,7 @@
           format-off = "󰂲";
           format-disabled = "󰂲";
           format-connected = " {device_alias}";
-          format-connected-battery = " ({device_battery_percentage}%) {device_alias}";
+          format-connected-battery = " ({device_battery_percentage}) {device_alias}";
           max-length = 25;
           tooltip-format = "{controller_alias} {controller_address}\n{num_connections} connected";
           tooltip-format-connected = "{controller_alias} {controller_address}\n{num_connections} connected\n{device_enumerate}";
@@ -87,9 +87,9 @@
             warning = 30;
             critical = 15;
           };
-          format = "{icon} {capacity}%";
+          format = "{icon} {capacity}";
           format-icons = ["" "" "" "" ""];
-          format-charging = "󰂄 {capacity}%";
+          format-charging = "󰂄 {capacity}";
           max-length = 25;
           tooltip = true;
           tooltip-format = "{timeTo}";
