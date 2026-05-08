@@ -17,13 +17,46 @@
         # ----------------------------
         # Validate argument
         # ----------------------------
-        if [[ ! "''${1:-}" =~ ^[+-][0-9]+$ ]]; then
-            echo "Usage: $0 [+N|-N] (example: +5, -3)"
-            exit 1
+        if [[ ! "''${1:-}" =~ ^[+-][0-9]+$ && "''${1:-}" != "mute" ]]; then
+          echo "Usage: $0 [+N|-N|mute]"
+          exit 1
         fi
 
         DELTA="$1"
         STACK_TAG="volume"
+
+        # ----------------------------
+        # Mute toggle
+        # ----------------------------
+        if [[ "$1" == "mute" ]]; then
+            wpctl set-mute @DEFAULT_SINK@ toggle
+
+            if wpctl get-volume @DEFAULT_SINK@ | grep -q MUTED; then
+                notify-send \
+                  -a "volume" \
+                  -t 1000 \
+                  -i audio-volume-muted \
+                  -r 9911 \
+                  -h string:x-canonical-private-synchronous:$STACK_TAG \
+                  -h boolean:transient:true \
+                  "Muted"
+            else
+                CURRENT=$(wpctl get-volume @DEFAULT_SINK@ | awk '{print $2}')
+                CURRENT_PERCENT=$(awk "BEGIN {printf \"%d\", $CURRENT*100}")
+
+                notify-send \
+                  -a "volume" \
+                  -t 1000 \
+                  -i audio-volume-high \
+                  -r 9911 \
+                  -h int:value:"$CURRENT_PERCENT" \
+                  -h string:x-canonical-private-synchronous:$STACK_TAG \
+                  -h boolean:transient:true \
+                  "Volume: ''${CURRENT_PERCENT}%"
+            fi
+
+            exit 0
+        fi
 
         # ----------------------------
         # Detect Bluetooth
