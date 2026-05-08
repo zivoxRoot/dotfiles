@@ -9,7 +9,6 @@
     playerctl
     ani-cli
     tree
-    zathura
     yazi
     yt-dlp
     libnotify

@@ -17,6 +17,7 @@
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/niri
+    ./programs/sioyek.nix
     ./programs/bash.nix
     ./programs/swaync.nix
   ];
