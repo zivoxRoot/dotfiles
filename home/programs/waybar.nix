@@ -72,12 +72,13 @@
           format-icons = ["" "" ""];
           tooltip = false;
           reverse-scrolling = true;
-          on-click = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          on-click = "foot --app-id=tui-app pulsemixer";
         };
 
         "network" = {
           format-disconnected = "󰤫";
-          format-wifi = "{icon} {signalStrength}";
+          format-wifi = "{icon} ({signalStrength}) {essid}";
+          max-length = 25;
           format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           format-ethernet = "󰈀";
           format-linked = "{ifname} 󰈀";
