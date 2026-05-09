@@ -5,7 +5,7 @@
 
       "Mod+T".action.spawn = "foot";
       "Mod+B".action.spawn = "zen-beta";
-      "Mod+Space".action.spawn = ["rofi" "-show" "drun"];
+      "Mod+Space".action.spawn-sh = ["foot --app-id=otter-launcher otter-launcher"];
       "Mod+W".action.spawn-sh = ["pkill waybar || waybar"];
       "Mod+Ctrl+W".action.spawn-sh = ["foot --app-id=tui-app impala"];
       "Mod+Ctrl+B".action.spawn-sh = ["foot --app-id=tui-app bluetui"];

@@ -4,6 +4,13 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
 
+    fsel.url = "github:Mjoyufull/fsel?rev=a9d035f4ac56d9f94a94e9372b0000665c41defe";
+
+    otter-launcher = {
+      url = "github:kuokuo123/otter-launcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +47,8 @@
     self,
     stylix,
     nixpkgs,
+    otter-launcher,
+    fsel,
     niri,
     ayugram-desktop,
     home-manager,

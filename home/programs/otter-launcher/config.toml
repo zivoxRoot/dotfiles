@@ -1,0 +1,145 @@
+[general]
+default_module = "gg"
+empty_module = "app"
+exec_cmd = "sh -c"
+vi_mode = true
+esc_to_abort = true
+cheatsheet_entry = "?"
+cheatsheet_viewer = "less -R; clear"
+clear_screen_after_execution = false
+loop_mode = false
+external_editor = "vi"
+delay_startup = 0
+callback = ""
+
+[interface]
+header = "    "
+place_holder = ""
+suggestion_mode = "list"
+separator = ""
+footer = ""
+suggestion_lines = 20
+list_prefix = "    "
+selection_prefix = "  \u001B[31;1m▌ "
+prefix_padding = 3
+default_module_message = "    \u001B[33msearch\u001B[0m the internet"
+empty_module_message = ""
+customized_list_order = false
+indicator_with_arg_module = ""
+indicator_no_arg_module = ""
+prefix_color = "\u001B[33m"
+description_color = "\u001B[39m"
+place_holder_color = "\u001B[30m"
+hint_color = "\u001B[30m"
+move_interface_right = 0
+move_interface_down = 0
+
+[overlay]
+overlay_cmd = ""
+overlay_trimmed_lines = 0
+overlay_height = 0
+move_overlay_right = 0
+move_overlay_down = 0
+
+[[modules]]
+description = "google search"
+prefix = "gg"
+cmd = "xdg-open https://www.google.com/search?q='{}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "power menu (fzf)"
+prefix = "po"
+cmd = """
+function power {
+if [[ -n $1 ]]; then
+case $1 in
+"logout") session=`loginctl session-status | head -n 1 | awk '{print $1}'`; loginctl terminate-session $session ;;
+"suspend") systemctl suspend ;;
+"hibernate") systemctl hibernate ;;
+"reboot") systemctl reboot ;;
+"shutdown") systemctl poweroff ;;
+esac fi }
+power $(echo -e 'reboot\nshutdown\nlogout\nsuspend\nhibernate' | fzf --info-command 'printf " power menu ($FZF_POS/$FZF_TOTAL_COUNT)"' --cycle --gutter " " --pointer " ▌" --color "bg+:-1,pointer:1,info:8,separator:8,scrollbar:0" --prompt '  ' | tail -1)
+"""
+
+[[modules]]
+description = "search nixos wiki"
+prefix = "wiki"
+cmd = "xdg-open 'https://wiki.nixos.org/w/index.php?search={}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "search packages"
+prefix = "pac"
+cmd = "xdg-open 'https://search.nixos.org/packages?channel=25.11&query={}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "cambridge dict"
+prefix = "dc"
+cmd = "xdg-open 'https://dictionary.cambridge.org/dictionary/english/{}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "search youtube"
+prefix = "yt"
+cmd = "xdg-open 'https://www.youtube.com/results?search_query={}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "search google map"
+prefix = "gm"
+cmd = "xdg-open 'https://www.google.com/maps/search/{}'"
+with_argument = true
+url_encode = true
+unbind_proc = true
+
+[[modules]]
+description = "launch app with fsel"
+prefix = "a"
+cmd = "fsel -vv -r -d -p {}"
+with_argument = true
+
+[[modules]]
+description = "launch fsel"
+prefix = "app"
+cmd = "fsel"
+
+[[modules]]
+description = "chatgpt"
+prefix = "gpt"
+cmd = "xdg-open 'https://chat.openai.com/?model=gpt-4o&q={}'"
+with_argument = true
+url_encode = true
+
+[[modules]]
+description = "to french"
+prefix = "tofr"
+cmd = "xdg-open 'https://translate.google.fr/?hl=fr&sl=auto&tl=fr&text={}&op=translate'"
+with_argument = true
+url_encode = true
+
+[[modules]]
+description = "to spanish"
+prefix = "toes"
+cmd = "xdg-open 'https://translate.google.fr/?hl=fr&sl=auto&tl=es&text={}&op=translate'"
+with_argument = true
+url_encode = true
+
+[[modules]]
+description = "to english"
+prefix = "toen"
+cmd = "xdg-open 'https://translate.google.fr/?hl=fr&sl=auto&tl=en&text={}&op=translate'"
+with_argument = true
+url_encode = true

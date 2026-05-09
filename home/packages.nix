@@ -5,6 +5,8 @@
 }: {
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
+    inputs.fsel.packages.${pkgs.system}.default
+    fzf
     pulsemixer
     playerctl
     ani-cli
@@ -17,7 +19,6 @@
     alejandra
     pre-commit
     vim
-    rofi
     xwayland-satellite
     swww
     brightnessctl

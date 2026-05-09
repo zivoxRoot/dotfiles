@@ -7,6 +7,7 @@
 }: {
   imports = [
     inputs.zen-browser.homeModules.beta
+    inputs.otter-launcher.homeModules.default
 
     ./packages.nix
 
@@ -16,6 +17,7 @@
     ./programs/git.nix
     ./programs/foot.nix
     ./programs/waybar.nix
+    ./programs/otter-launcher
     ./programs/niri
     ./programs/sioyek.nix
     ./programs/bash.nix

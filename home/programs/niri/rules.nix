@@ -19,6 +19,22 @@
         tiled-state = true;
       }
 
+      # Otter launcher floating center small
+      {
+        matches = [
+          {
+            app-id = "otter-launcher";
+          }
+        ];
+
+        open-floating = true;
+
+        min-width = 400;
+        max-width = 400;
+        min-height = 400;
+        max-height = 400;
+      }
+
       # TUI app float center
       {
         matches = [
