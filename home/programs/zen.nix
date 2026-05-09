@@ -76,39 +76,6 @@
           workspace = spaces."Programming".id;
           isEssential = false;
         };
-        # Nix-related stuff folder
-        "Nix" = {
-          id = "43e8i499-5a14-4827-9545-91u8e8dd3bf6";
-          isGroup = true;
-          isFolderCollapsed = true;
-          editedTitle = true;
-          position = 105;
-          workspace = spaces."Programming".id;
-        };
-        "Packages" = {
-          id = "42e8a419-5a34-4823-9749-91c8e8yd3if6";
-          url = "https://search.nixos.org/packages";
-          position = 106;
-          workspace = spaces."Programming".id;
-          isEssential = false;
-          folderParentId = "Nix";
-        };
-        "Wiki" = {
-          id = "42e8a419-5a14-4823-9745-91c8e8dd3bf6";
-          url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
-          position = 107;
-          workspace = spaces."Programming".id;
-          isEssential = false;
-          folderParentId = "Nix";
-        };
-        "Nix language" = {
-          id = "42e8a419-5a34-482u-9743-91c8e8yd3if7";
-          url = "https://nix.dev/tutorials/nix-language.html";
-          position = 108;
-          workspace = spaces."Programming".id;
-          isEssential = false;
-          folderParentId = "Nix";
-        };
 
         # School pins
         "CNED" = {
