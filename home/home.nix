@@ -18,6 +18,7 @@
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/otter-launcher
+    ./programs/clipse.nix
     ./programs/niri
     ./programs/sioyek.nix
     ./programs/bash.nix

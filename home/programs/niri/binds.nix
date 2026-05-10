@@ -10,6 +10,7 @@
       "Mod+Ctrl+W".action.spawn-sh = ["foot --app-id=tui-app impala"];
       "Mod+Ctrl+B".action.spawn-sh = ["foot --app-id=tui-app bluetui"];
       "Mod+E".action.spawn-sh = ["foot --app-id=tui-app yazi"];
+      "Mod+V".action.spawn-sh = ["foot --app-id=tui-app clipse"];
 
       "Mod+N".action.spawn-sh = ["swaync-client --toggle-panel -sw"];
       "Mod+Ctrl+N".action.spawn-sh = ["swaync-client --toggle-dnd -sw"];

@@ -5,6 +5,7 @@
       {argv = ["waybar"];}
       {argv = ["swww-daemon"];}
       {argv = ["swaync"];}
+      {argv = ["clipse -listen"];}
     ];
   };
 }
