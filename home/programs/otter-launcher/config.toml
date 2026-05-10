@@ -2,7 +2,7 @@
 default_module = "gg"
 empty_module = "app"
 exec_cmd = "sh -c"
-vi_mode = true
+vi_mode = false
 esc_to_abort = true
 cheatsheet_entry = "?"
 cheatsheet_viewer = "less -R; clear"
@@ -75,7 +75,7 @@ unbind_proc = true
 
 [[modules]]
 description = "search packages"
-prefix = "pac"
+prefix = "pkg"
 cmd = "xdg-open 'https://search.nixos.org/packages?channel=25.11&query={}'"
 with_argument = true
 url_encode = true
