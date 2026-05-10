@@ -31,14 +31,8 @@
       text-empty = "No Notifications";
 
       widgets = [
-        "mpris"
         "notifications"
       ];
-      widget-config = {
-        mpris = {
-          image-size = 96;
-        };
-      };
     };
 
     style = ''
@@ -160,54 +154,6 @@
         padding: 10px;
         border-radius: 6px;
         background-color: transparent;
-      }
-
-      /* DND Widget */
-      .widget-dnd {
-        font-weight: 800;
-        margin: 6px;
-        font-size: 1.2rem;
-      }
-
-      .widget-dnd > switch {
-        border-radius: 0px;
-        box-shadow: none;
-        padding: 2px;
-      }
-
-      .widget-dnd > switch slider {
-        border-radius: 0px;
-      }
-
-      /* Music player */
-      .widget-mpris {
-        padding: 6px;
-      }
-
-      .widget-mpris button {
-        border-radius: 6px;
-      }
-
-      /* Volume & Backlight */
-      .widget-volume, .widget-backlight {
-        padding: 8px;
-        margin: 6px;
-        border-radius: 12px;
-      }
-
-      .widget-volume label, .widget-backlight label {
-        font-size: 20px;
-        margin-right: 15px;
-      }
-
-      /* Sliders */
-      scale trough {
-        min-height: 6px;
-        border-radius: 12px;
-      }
-
-      scale trough highlight {
-        border-radius: 12px;
       }
     '';
   };
