@@ -15,7 +15,7 @@
       notification-icon-size = 64;
       notification-body-image-height = 100;
       notification-body-image-width = 200;
-      notification-inline-replies = true;
+      notification-inline-replies = false;
       notification-2fa-action = false;
 
       timeout = 5;
