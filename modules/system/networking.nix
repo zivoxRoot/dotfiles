@@ -5,4 +5,6 @@
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
   };
+
+  virtualisation.docker.enable = true;
 }
