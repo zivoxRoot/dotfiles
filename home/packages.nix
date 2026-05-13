@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
     inputs.fsel.packages.${pkgs.system}.default
+    bc
     wl-clipboard
     adwaita-icon-theme
     satty
