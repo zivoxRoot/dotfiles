@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     fsel.url = "github:Mjoyufull/fsel?rev=a9d035f4ac56d9f94a94e9372b0000665c41defe";
 
     otter-launcher = {
@@ -46,6 +51,7 @@
   outputs = {
     self,
     stylix,
+    nvf,
     nixpkgs,
     otter-launcher,
     fsel,

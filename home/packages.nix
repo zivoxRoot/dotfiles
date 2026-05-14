@@ -6,6 +6,8 @@
   home.packages = with pkgs; [
     inputs.ayugram-desktop.packages.${pkgs.system}.ayugram-desktop
     inputs.fsel.packages.${pkgs.system}.default
+    lazygit
+    glow
     vscode
     bc
     wl-clipboard

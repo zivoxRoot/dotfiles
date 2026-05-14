@@ -8,6 +8,7 @@
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.otter-launcher.homeModules.default
+    inputs.nvf.homeManagerModules.default
 
     ./packages.nix
 
@@ -15,6 +16,7 @@
 
     ./programs/zen.nix
     ./programs/git.nix
+    ./programs/nvf.nix
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/otter-launcher
