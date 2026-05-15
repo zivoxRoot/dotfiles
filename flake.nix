@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
 
+    mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +51,7 @@
     self,
     stylix,
     nvf,
+    mangowm,
     nixpkgs,
     otter-launcher,
     fsel,

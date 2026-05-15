@@ -3,5 +3,5 @@
     inputs.niri.nixosModules.niri
   ];
 
-  programs.niri.enable = true;
+  programs.niri.enable = false;
 }

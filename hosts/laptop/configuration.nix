@@ -12,6 +12,7 @@
     ../../modules/desktop/stylix.nix
     ../../modules/desktop/xkb.nix
     ../../modules/desktop/niri.nix
+    ../../modules/desktop/mango.nix
 
     # Services
     ../../modules/services/ssh.nix
