@@ -17,6 +17,7 @@
     ../../modules/services/ssh.nix
     ../../modules/services/greeter.nix
     ../../modules/services/bluetooth.nix
+    ../../modules/services/kanata.nix
 
     # System
     ../../modules/system/nix.nix
