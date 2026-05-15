@@ -19,6 +19,7 @@
     ./programs/nvf.nix
     ./programs/foot.nix
     ./programs/waybar.nix
+    ./programs/sunsetr
     ./programs/otter-launcher
     ./programs/clipse.nix
     ./programs/niri
