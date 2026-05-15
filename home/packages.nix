@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
     telegram-desktop
+    python315
     lazygit
     glow
     vscode
