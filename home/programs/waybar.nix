@@ -8,9 +8,18 @@
         position = "top";
         spacing = 10;
 
-        modules-left = ["niri/workspaces" "mpris"];
+        modules-left = [
+          "ext/workspaces"
+          "mpris"
+        ];
         modules-center = ["clock"];
-        modules-right = ["custom/notification" "pulseaudio" "network" "bluetooth" "battery"];
+        modules-right = [
+          "custom/notification"
+          "pulseaudio"
+          "network"
+          "bluetooth"
+          "battery"
+        ];
 
         "mpris" = {
           format = "{player_icon} {artist} - {title}";
@@ -69,7 +78,11 @@
         "pulseaudio" = {
           format = "{icon} {volume}";
           format-muted = " ";
-          format-icons = ["" "" ""];
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
           tooltip = false;
           reverse-scrolling = true;
           on-click = "foot --app-id=tui-app pulsemixer";
@@ -79,7 +92,13 @@
           format-disconnected = "󰤫";
           format-wifi = "{icon} ({signalStrength}) {essid}";
           max-length = 25;
-          format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
+          format-icons = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
           format-ethernet = "󰈀";
           format-linked = "{ifname} 󰈀";
           tooltip-format = " {ifname} via {gwaddri}";
@@ -110,7 +129,13 @@
             critical = 15;
           };
           format = "{icon} {capacity}";
-          format-icons = ["" "" "" "" ""];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
           format-charging = "󰂄 {capacity}";
           max-length = 25;
           tooltip = true;
