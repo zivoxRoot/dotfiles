@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    htop
     telegram-desktop
     python315
     lazygit
