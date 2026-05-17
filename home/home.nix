@@ -16,6 +16,7 @@
 
     ./programs/zen.nix
     ./programs/git.nix
+    ./programs/tmux.nix
     ./programs/nvf.nix
     ./programs/ohmyposh.nix
     ./programs/foot.nix
