@@ -5,6 +5,11 @@
 }: {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    gnome.gvfs
+    udiskie
+    exfatprogs
+    ntfs3g
+    sesh
     gomi
     ripgrep
     fd

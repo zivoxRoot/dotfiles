@@ -14,12 +14,14 @@
     ../../modules/desktop/niri.nix
     ../../modules/desktop/mango.nix
     ../../modules/desktop/zsh.nix
+    ../../modules/desktop/usb.nix
 
     # Services
     ../../modules/services/ssh.nix
     ../../modules/services/greeter.nix
     ../../modules/services/bluetooth.nix
     ../../modules/services/kanata.nix
+    ../../modules/services/syncthing.nix
 
     # System
     ../../modules/system/nix.nix
