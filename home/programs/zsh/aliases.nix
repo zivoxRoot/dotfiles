@@ -42,6 +42,7 @@
 
     # Others
     fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
+    y = "yazi";
     lg = "lazygit";
     bat = "bat --theme base16";
     cat = "bat -p --theme base16";
