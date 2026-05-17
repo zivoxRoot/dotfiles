@@ -17,9 +17,12 @@
     ./programs/zen.nix
     ./programs/git.nix
     ./programs/nvf.nix
+    ./programs/ohmyposh.nix
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/sunsetr
+    ./programs/zsh
+    ./programs/espanso.nix
     ./programs/otter-launcher
     ./programs/clipse.nix
     ./programs/niri

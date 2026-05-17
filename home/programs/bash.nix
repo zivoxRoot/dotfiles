@@ -1,6 +1,6 @@
 {...}: {
   programs.bash = {
-    enable = true;
+    enable = false;
 
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake ~/dotfiles#theophile";

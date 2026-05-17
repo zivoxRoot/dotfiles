@@ -5,6 +5,11 @@
 }: {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    ripgrep
+    fd
+    bat
+    jq
+    trash-cli
     htop
     telegram-desktop
     python315
