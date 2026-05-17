@@ -34,44 +34,49 @@
     ];
 
     initContent = ''
-      # Zsh keybindings
-      bindkey '^[f' autosuggest-accept
-      bindkey '^[j' history-search-forward
-      bindkey '^[k' history-search-backward
-      bindkey '^[l' forward-word
-      bindkey '^[h' backward-word
+      fpath+=("${pkgs.pure-prompt}/share/zsh/site-functions")
 
-      # Zsh options
-      setopt autocd
-      setopt correct
+        # Zsh keybindings
+        bindkey '^[f' autosuggest-accept
+        bindkey '^[j' history-search-forward
+        bindkey '^[k' history-search-backward
+        bindkey '^[l' forward-word
+        bindkey '^[h' backward-word
 
-      # History
-      setopt appendhistory
-      setopt sharehistory
-      setopt hist_ignore_space
-      setopt hist_ignore_all_dups
-      setopt hist_save_no_dups
-      setopt hist_ignore_dups
-      setopt hist_find_no_dups
+        # Zsh options
+        setopt autocd
+        setopt correct
 
-      # Function to create a directory and cd into it
-      mkcd() {
-        mkdir -p -- "$1" && cd "$1"
-      }
+        # History
+        setopt appendhistory
+        setopt sharehistory
+        setopt hist_ignore_space
+        setopt hist_ignore_all_dups
+        setopt hist_save_no_dups
+        setopt hist_ignore_dups
+        setopt hist_find_no_dups
 
-      # Completion styling
-      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+        # Function to create a directory and cd into it
+        mkcd() {
+          mkdir -p -- "$1" && cd "$1"
+        }
 
-      # FZF
-      source <(${pkgs.fzf}/bin/fzf --zsh)
+        # Completion styling
+        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-      # Zoxide
-      eval "$(${pkgs.zoxide}/bin/zoxide init --cmd cd zsh)"
+        # FZF
+        source <(${pkgs.fzf}/bin/fzf --zsh)
 
-      # Zsh autosuggestions
-      source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-      # Zsh syntax highlighting
-      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+        # Zoxide
+        eval "$(${pkgs.zoxide}/bin/zoxide init --cmd cd zsh)"
+
+        # Zsh autosuggestions
+        source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        # Zsh syntax highlighting
+        source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+        autoload -U promptinit; promptinit
+        prompt pure
     '';
   };
 }
