@@ -46,8 +46,9 @@
     bat = "bat --theme base16";
     cat = "bat -p --theme base16";
     mkdir = "mkdir -p";
-    rm = "trash";
-    rmdir = "trash";
+    rm = "gomi";
+    rmdir = "gomi";
+    restore = "gomi --restore";
     mv = "mv -i";
     cp = "cp -ri";
     q = "exit";
