@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.waybar = {
     enable = true;
 
@@ -12,7 +13,7 @@
           "ext/workspaces"
           "mpris"
         ];
-        modules-center = ["clock"];
+        modules-center = [ "clock" ];
         modules-right = [
           "custom/notification"
           "pulseaudio"
@@ -22,7 +23,7 @@
         ];
 
         "mpris" = {
-          format = "{player_icon} {artist} - {title}";
+          format = "{player_icon}  {title} - {artist}";
           format-paused = "{artist} - {title}";
           max-length = 25;
           interval = 1;
