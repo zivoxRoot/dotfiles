@@ -19,6 +19,7 @@
     ./programs/tmux.nix
     ./programs/nvf.nix
     ./programs/ohmyposh.nix
+    ./programs/hyprlock.nix
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/sunsetr
