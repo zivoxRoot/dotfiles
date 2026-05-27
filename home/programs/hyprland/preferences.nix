@@ -1,7 +1,8 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings.input = {
     kb_layout = "us";
-    kb_options = "caps:swapescape";
+    kb_options = "caps:swapescape,compose:ralt";
 
     follow_mouse = 1;
 
