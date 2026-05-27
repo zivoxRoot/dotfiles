@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.waybar = {
     enable = true;
 
@@ -13,7 +12,7 @@
           "ext/workspaces"
           "mpris"
         ];
-        modules-center = [ "clock" ];
+        modules-center = ["clock"];
         modules-right = [
           "custom/notification"
           "pulseaudio"
