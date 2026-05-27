@@ -5,6 +5,9 @@
 }: {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    pulsemixer
+    qutebrowser
+    nyxt
     gnome.gvfs
     udiskie
     exfatprogs
