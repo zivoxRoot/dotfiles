@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd mango";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd Hyprland";
         user = "theophile";
       };
     };

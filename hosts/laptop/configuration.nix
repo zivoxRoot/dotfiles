@@ -13,6 +13,7 @@
     ../../modules/desktop/xkb.nix
     ../../modules/desktop/niri.nix
     ../../modules/desktop/mango.nix
+    ../../modules/desktop/hyprland.nix
     ../../modules/desktop/zsh.nix
     ../../modules/desktop/usb.nix
 

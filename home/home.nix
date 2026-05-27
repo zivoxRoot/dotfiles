@@ -23,6 +23,7 @@
     ./programs/waybar.nix
     ./programs/sunsetr
     ./programs/zsh
+    ./programs/hyprland
     ./programs/espanso.nix
     ./programs/otter-launcher
     ./programs/clipse.nix
