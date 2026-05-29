@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.swaync = {
     enable = true;
 
@@ -51,9 +52,8 @@
         /* --- CONTROL CENTER (Main Window) --- */
         .control-center {
           border-radius: 0px;
-          margin: 16px;  /* Control center margin */
+          margin: 10px;  /* Control center margin */
           padding: 12px;
-          border: 3px solid @base05;
         }
 
         /* --- Notifications in Control Center --- */
