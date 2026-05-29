@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.zsh.shellAliases = {
     # Nixos
     nrs = "sudo nixos-rebuild switch --flake ~/dotfiles#theophile";
@@ -30,6 +31,7 @@
     ga = "git add .";
     gc = "git commit -m";
     gp = "git push";
+    gP = "git pull";
     gd = "git diff";
     gl = "git log --oneline --graph --decorate";
     gll = "git log --graph --decorate";
