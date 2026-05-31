@@ -4,7 +4,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.otter-launcher.homeModules.default
@@ -23,6 +24,7 @@
     ./programs/foot.nix
     ./programs/waybar.nix
     ./programs/sunsetr
+    ./programs/mangowm
     ./programs/zsh
     ./programs/hyprland
     ./programs/espanso.nix
