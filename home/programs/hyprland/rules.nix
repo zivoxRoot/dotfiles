@@ -9,7 +9,7 @@
 
     # Telegram floating in special workspace
     "float,class:^(org.telegram.desktop)$"
-    "size 200 600,class:^(org.telegram.desktop)$"
+    "size 450 750,class:^(org.telegram.desktop)$"
     "workspace special:messaging,class:^(org.telegram.desktop)$"
 
     # File manager floating in special workspace
