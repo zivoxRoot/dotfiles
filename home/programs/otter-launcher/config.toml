@@ -1,5 +1,5 @@
 [general]
-default_module = "gg"
+default_module = "a"
 empty_module = "app"
 exec_cmd = "sh -c"
 vi_mode = false
@@ -42,8 +42,8 @@ move_overlay_right = 0
 move_overlay_down = 0
 
 [[modules]]
-description = "google search"
-prefix = "gg"
+description = "web search"
+prefix = "w"
 cmd = "xdg-open https://www.google.com/search?q='{}'"
 with_argument = true
 url_encode = true
