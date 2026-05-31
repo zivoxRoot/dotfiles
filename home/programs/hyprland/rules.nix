@@ -15,5 +15,8 @@
     # File manager floating in special workspace
     "float,class:yazi"
     "workspace special:yazi,class:yazi"
+
+    # PDF viewer in special workspace
+    "workspace special:pdfviewer,class:sioyek"
   ];
 }

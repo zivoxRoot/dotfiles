@@ -21,6 +21,7 @@
       "SUPER, W, exec, pkill waybar || waybar"
 
       "SUPER, M, togglespecialworkspace, messaging"
+      "SUPER, R, togglespecialworkspace, pdfviewer"
     ];
   };
 }
