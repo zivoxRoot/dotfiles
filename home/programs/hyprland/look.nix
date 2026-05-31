@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     general = {
       gaps_in = 5;
@@ -16,8 +17,7 @@
 
       active_opacity = 1;
       inactive_opacity = 1;
-
-      dim_special = 1;
+      dim_special = 0;
 
       shadow = {
         enabled = false;
