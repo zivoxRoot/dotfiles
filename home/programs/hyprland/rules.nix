@@ -13,7 +13,7 @@
     "workspace special:messaging,class:^(org.telegram.desktop)$"
 
     # File manager floating in special workspace
-    # "float,class:yazi"
-    # "workspace special:yazi,class:yazi"
+    "float,class:yazi"
+    "workspace special:yazi,class:yazi"
   ];
 }

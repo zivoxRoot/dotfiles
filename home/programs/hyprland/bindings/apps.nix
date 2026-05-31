@@ -5,7 +5,7 @@
       "SUPER, T, exec, foot"
       "SUPER, B, exec, zen-beta"
       "SUPER, SPACE, exec, foot --app-id=otter-launcher otter-launcher"
-      "SUPER, E, exec, foot --app-id=tui-app yazi"
+      "SUPER, E, exec, toggle-yazi"
 
       "SUPER, V, exec, foot --app-id=tui-app clipse"
       "SUPER_CTRL, B, exec, foot --app-id=tui-app bluetui"
