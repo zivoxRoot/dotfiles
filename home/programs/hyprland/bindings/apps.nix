@@ -6,6 +6,7 @@
       "SUPER, B, exec, zen-beta"
       "SUPER, SPACE, exec, foot --app-id=otter-launcher otter-launcher"
       "SUPER, E, exec, toggle-yazi"
+      "SUPER, M, exec, toggle-telegram"
 
       "SUPER, V, exec, foot --app-id=tui-app clipse"
       "SUPER_CTRL, B, exec, foot --app-id=tui-app bluetui"
@@ -19,8 +20,6 @@
 
       # Utils
       "SUPER, W, exec, pkill waybar || waybar"
-
-      "SUPER, M, togglespecialworkspace, messaging"
       "SUPER, R, togglespecialworkspace, pdfviewer"
     ];
   };
