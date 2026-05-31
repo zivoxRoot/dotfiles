@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     bind = [
       "SUPER, Q, killactive"
@@ -45,10 +46,6 @@
       "SUPER_ALT, code:17, movetoworkspacesilent, 8"
       "SUPER_ALT, code:18, movetoworkspacesilent, 9"
       "SUPER_ALT, code:19, movetoworkspacesilent, 10"
-
-      # Special workspace
-      "SUPER, S, togglespecialworkspace, magic"
-      "SUPER_SHIFT, S, movetoworkspace, special:magic"
     ];
 
     bindm = [
