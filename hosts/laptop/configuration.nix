@@ -3,7 +3,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     # Hardware
     ./hardware.nix
@@ -23,6 +24,7 @@
     ../../modules/services/bluetooth.nix
     ../../modules/services/kanata.nix
     ../../modules/services/syncthing.nix
+    ../../modules/services/printing.nix
 
     # System
     ../../modules/system/nix.nix
