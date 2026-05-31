@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.waybar = {
     enable = true;
 
@@ -9,10 +10,10 @@
         spacing = 10;
 
         modules-left = [
-          "ext/workspaces"
+          "hyprland/workspaces"
           "mpris"
         ];
-        modules-center = ["clock"];
+        modules-center = [ "clock" ];
         modules-right = [
           "custom/notification"
           "pulseaudio"
