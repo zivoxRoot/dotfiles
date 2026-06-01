@@ -9,5 +9,6 @@
     "Telegram"
     "sioyek"
     "foot --app-id=yazi yazi"
+    "foot --app-id=calculator qalc"
   ];
 }
