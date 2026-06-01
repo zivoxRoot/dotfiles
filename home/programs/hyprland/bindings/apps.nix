@@ -22,6 +22,12 @@
       # Utils
       "SUPER, W, exec, pkill waybar || waybar"
       "SUPER, R, togglespecialworkspace, pdfviewer"
+
+      # Screenshot
+      ", PRINT, exec, screenshot region"
+      "SUPER, PRINT, exec, screenshot window"
+      "SHIFT, PRINT, exec, screenshot output"
+      "SUPER_SHIFT, V, exec, edit-last-screenshot"
     ];
   };
 }
