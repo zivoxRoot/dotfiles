@@ -18,5 +18,9 @@
 
     # PDF viewer in special workspace
     "workspace special:pdfviewer,class:sioyek"
+
+    # Calculator floating in special workspace
+    "float,class:calculator"
+    "workspace special:calculator,class:calculator"
   ];
 }

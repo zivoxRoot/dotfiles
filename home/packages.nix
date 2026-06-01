@@ -6,6 +6,7 @@
 {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    libqalculate
     lazydocker
     pulsemixer
     qutebrowser
@@ -26,7 +27,6 @@
     lazygit
     glow
     vscode
-    bc
     wl-clipboard
     adwaita-icon-theme
     satty
