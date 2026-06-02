@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.nvf = {
     enable = true;
 
@@ -6,6 +7,7 @@
       vim = {
         viAlias = false;
         vimAlias = true;
+        hideSearchHighlight = true;
 
         options = {
           number = true;
@@ -19,8 +21,8 @@
 
         autocmds = [
           {
-            event = ["BufWritePre"];
-            pattern = ["*"];
+            event = [ "BufWritePre" ];
+            pattern = [ "*" ];
             command = "silent! lua vim.lsp.buf.format()";
           }
         ];
@@ -62,7 +64,7 @@
             enable = true;
             format = {
               enable = true;
-              type = ["alejandra"];
+              type = [ "alejandra" ];
             };
           };
 
