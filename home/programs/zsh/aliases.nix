@@ -54,6 +54,7 @@
     restore = "gomi --restore";
     mv = "mv -i";
     cp = "cp -ri";
+    t = "sesh-tmux";
     q = "exit";
   };
 }

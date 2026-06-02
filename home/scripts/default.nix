@@ -8,5 +8,6 @@
     ./toggle-calculator.nix
     ./screenshot.nix
     ./edit-last-screenshot.nix
+    ./sesh-tmux.nix
   ];
 }
