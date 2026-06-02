@@ -6,6 +6,7 @@
 {
   home.packages = with pkgs; [
     inputs.fsel.packages.${pkgs.system}.default
+    unixtools.arp
     libqalculate
     lazydocker
     pulsemixer
