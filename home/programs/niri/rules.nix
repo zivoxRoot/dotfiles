@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.niri.settings = {
     window-rules = [
       # Firefox picture in picture
@@ -50,7 +51,7 @@
     layer-rules = [
       {
         matches = [
-          {namespace = "^swww-daemon$";}
+          { namespace = "^swww-daemon$"; }
         ];
 
         place-within-backdrop = true;

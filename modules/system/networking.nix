@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   networking.hostName = "nixos";
 
   networking.wireless.iwd = {

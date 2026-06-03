@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = [pkgs.oh-my-posh];
+{ pkgs, ... }:
+{
+  home.packages = [ pkgs.oh-my-posh ];
 
   programs.oh-my-posh = {
     enable = false;

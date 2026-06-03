@@ -47,44 +47,46 @@
     };
   };
 
-  outputs = {
-    self,
-    stylix,
-    nvf,
-    mangowm,
-    nixpkgs,
-    otter-launcher,
-    fsel,
-    niri,
-    home-manager,
-    zen-browser,
-    ...
-  } @ inputs: {
-    nixosConfigurations.theophile = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
-      modules = [
-        stylix.nixosModules.stylix
-        ./hosts/laptop/configuration.nix
+  outputs =
+    {
+      self,
+      stylix,
+      nvf,
+      mangowm,
+      nixpkgs,
+      otter-launcher,
+      fsel,
+      niri,
+      home-manager,
+      zen-browser,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.theophile = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          stylix.nixosModules.stylix
+          ./hosts/laptop/configuration.nix
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
 
-            extraSpecialArgs = {inherit inputs;};
+              extraSpecialArgs = { inherit inputs; };
 
-            users.theophile = {
-              imports = [
-                ./home/home.nix
-              ];
+              users.theophile = {
+                imports = [
+                  ./home/home.nix
+                ];
+              };
+
+              backupFileExtension = "backup";
             };
-
-            backupFileExtension = "backup";
-          };
-        }
-      ];
+          }
+        ];
+      };
     };
-  };
 }

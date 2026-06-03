@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./input.nix
     ./startup.nix

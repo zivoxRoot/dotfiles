@@ -1,10 +1,11 @@
-{...}: {
+{ ... }:
+{
   programs.sioyek = {
     enable = true;
 
     bindings = {
-      "screen_down" = ["d"];
-      "screen_up" = ["u"];
+      "screen_down" = [ "d" ];
+      "screen_up" = [ "u" ];
     };
 
     config = {

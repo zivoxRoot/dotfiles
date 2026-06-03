@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     bindl = [
       ", X86AudioNext, exec, playerctl next"

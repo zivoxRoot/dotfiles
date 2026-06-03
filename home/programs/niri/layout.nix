@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.niri.settings = {
     cursor = {
       hide-after-inactive-ms = 3000;
@@ -11,9 +12,9 @@
 
       background-color = "transparent";
       preset-column-widths = [
-        {proportion = 1. / 3.;}
-        {proportion = 1. / 2.;}
-        {proportion = 2. / 3.;}
+        { proportion = 1. / 3.; }
+        { proportion = 1. / 2.; }
+        { proportion = 2. / 3.; }
       ];
     };
 
