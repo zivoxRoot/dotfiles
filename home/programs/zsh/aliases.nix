@@ -54,7 +54,7 @@
     restore = "gomi --restore";
     mv = "mv -i";
     cp = "cp -ri";
-    t = "sesh-tmux";
+    t = "sesh connect $(sesh list | fzf --reverse --no-preview)";
     q = "exit";
   };
 }
