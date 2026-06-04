@@ -79,8 +79,8 @@
       "SUPER, TAB, workspace, previous"
 
       # Navigate relative workspaces with SUPER + Shift + [J / K]
-      "SUPER_ALT, H, workspace, r+1"
-      "SUPER_ALT, L, workspace, r-1"
+      "SUPER_ALT, H, workspace, r-1"
+      "SUPER_ALT, L, workspace, r+1"
     ];
   };
 }
