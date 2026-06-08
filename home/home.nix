@@ -18,6 +18,7 @@
     ./programs/zen.nix
     ./programs/git.nix
     ./programs/tmux.nix
+    ./programs/mpv.nix
     ./programs/nvf.nix
     ./programs/ohmyposh.nix
     ./programs/hyprlock.nix

@@ -26,7 +26,6 @@
     # GUI applications
     telegram-desktop
     vscode
-    mpv
     nautilus
     satty
     feh
