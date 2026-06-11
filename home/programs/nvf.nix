@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nvf = {
     enable = true;
@@ -9,6 +9,17 @@
         vimAlias = true;
         hideSearchHighlight = true;
 
+        extraPlugins = {
+          render-markdown = {
+            package = pkgs.vimPlugins.render-markdown-nvim;
+          };
+        };
+
+        visuals = {
+          nvim-web-devicons.enable = true;
+          # highlight-undo.enable = true;
+        };
+
         options = {
           number = true;
           relativenumber = true;
@@ -17,6 +28,8 @@
           expandtab = true;
           smartindent = true;
           autoindent = true;
+          foldenable = false;
+          # legacy_commands = false;
         };
 
         autocmds = [
@@ -26,6 +39,19 @@
             command = "silent! lua vim.lsp.buf.format()";
           }
         ];
+
+        notes.obsidian = {
+          enable = true;
+          setupOpts = {
+            legacy_commands = false;
+            workspaces = [
+              {
+                name = "notes";
+                path = "~/notes";
+              }
+            ];
+          };
+        };
 
         clipboard = {
           enable = true;
@@ -38,7 +64,10 @@
 
         telescope.enable = true;
 
-        autocomplete.nvim-cmp.enable = true;
+        autocomplete = {
+          nvim-cmp.enable = true;
+          blink-cmp.enable = true;
+        };
 
         treesitter = {
           enable = true;
@@ -68,13 +97,43 @@
             };
           };
 
-          typescript = {
+          ts = {
             enable = true;
-            format.enable = true;
+
+            treesitter.enable = true;
+
+            lsp = {
+              enable = true;
+              server = [ "ts_ls" ];
+            };
+
+            extraDiagnostics = {
+              enable = true;
+              types = [ "eslint_d" ];
+            };
+
+            format = {
+              enable = true;
+              type = [ "prettier" ];
+            };
+          };
+
+          python = {
+            enable = true;
+            treesitter.enable = true;
+            lsp.enable = true;
+            format = {
+              enable = true;
+              type = [ "ruff" ];
+            };
           };
 
           lua.enable = true;
-          python.enable = true;
+          bash.enable = true;
+          json.enable = true;
+          css.enable = true;
+          html.enable = true;
+          clang.enable = true;
         };
 
         binds = {
@@ -85,8 +144,9 @@
         utility = {
           yazi-nvim.enable = true;
           motion.flash-nvim.enable = true;
+          # images.image-nvim.enable = true;
           preview.markdownPreview = {
-            enable = true;
+            enable = false;
             autoStart = true;
             autoClose = true;
           };
