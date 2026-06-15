@@ -16,6 +16,7 @@
     ./scripts
 
     ./programs/zen.nix
+    ./programs/hyprsunset.nix
     ./programs/git.nix
     ./programs/tmux.nix
     ./programs/mpv.nix
@@ -24,7 +25,7 @@
     ./programs/hyprlock.nix
     ./programs/foot.nix
     ./programs/waybar.nix
-    ./programs/sunsetr
+    # ./programs/sunsetr
     ./programs/mangowm
     ./programs/zsh
     ./programs/hyprland
