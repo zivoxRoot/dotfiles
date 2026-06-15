@@ -42,6 +42,11 @@
     gm = "git merge";
     gcl = "git clone";
 
+    # Vim
+    v = "nvim";
+    vi = "nvim";
+    vim = "nvim";
+
     # Others
     fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
     y = "yazi";
