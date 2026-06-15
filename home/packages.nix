@@ -31,6 +31,7 @@
     feh
 
     # TUI tools
+    kew
     bluetui
     impala
     ani-cli
@@ -46,6 +47,9 @@
     lazydocker
 
     # CLI tools
+    ffmpeg
+    beets
+    imagemagick
     tree
     vim
     unzip

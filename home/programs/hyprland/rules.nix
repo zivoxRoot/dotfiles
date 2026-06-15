@@ -9,6 +9,11 @@
     "float,class:tui-app-large"
     "size 1100 650,class:tui-app-large"
 
+    # Music player floating in special workspace
+    "float,class:music-player"
+    "size 900 650,class:music-player"
+    "workspace special:music-player,class:music-player"
+
     # Otter launcher float
     "float,class:otter-launcher"
     "size 400 300,class:otter-launcher"
