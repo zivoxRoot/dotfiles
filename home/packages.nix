@@ -22,6 +22,7 @@
     wl-clipboard
     adwaita-icon-theme
     qutebrowser
+    quickshell
 
     # GUI applications
     telegram-desktop
