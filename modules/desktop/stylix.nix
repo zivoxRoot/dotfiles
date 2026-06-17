@@ -7,7 +7,7 @@
   stylix = {
     enable = true;
     image = ../../wallpaper.png;
-    polarity = "dark";
+    polarity = "light";
 
     cursor = {
       package = pkgs.bibata-cursors;

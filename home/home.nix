@@ -10,6 +10,7 @@
     inputs.zen-browser.homeModules.beta
     inputs.otter-launcher.homeModules.default
     inputs.nvf.homeManagerModules.default
+    inputs.nixvim.homeModules.nixvim
 
     ./packages.nix
 
@@ -21,6 +22,7 @@
     ./programs/tmux.nix
     ./programs/mpv.nix
     ./programs/nvf.nix
+    ./programs/nixvim.nix
     ./programs/ohmyposh.nix
     ./programs/hyprlock.nix
     ./programs/foot.nix
