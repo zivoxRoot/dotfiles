@@ -48,6 +48,7 @@
     lazydocker
 
     # CLI tools
+    tcpdump
     ffmpeg
     beets
     imagemagick

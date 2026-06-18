@@ -17,6 +17,7 @@
     ../../modules/desktop/hyprland.nix
     ../../modules/desktop/zsh.nix
     ../../modules/desktop/usb.nix
+    ../../modules/desktop/wireshark.nix
 
     # Services
     ../../modules/services/ssh.nix
