@@ -22,6 +22,7 @@
     # Services
     ../../modules/services/ssh.nix
     ../../modules/services/greeter.nix
+    ../../modules/services/upower.nix
     ../../modules/services/bluetooth.nix
     ../../modules/services/kanata.nix
     ../../modules/services/syncthing.nix
