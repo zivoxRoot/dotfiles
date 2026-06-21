@@ -6,7 +6,7 @@
 
       # Windows settings
       "SUPER, P, togglefloating"
-      "SUPER, Y, togglesplit"
+      "SUPER, Y, layoutmsg, togglesplit"
       "SUPER, F, fullscreen, 1"
       "SUPER_SHIFT, F, fullscreen, 0"
       "SUPER_SHIFT, X, pin"
