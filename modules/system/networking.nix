@@ -2,8 +2,10 @@
 {
   networking.hostName = "nixos";
 
+  networking.networkmanager.enable = true;
+
   networking.wireless.iwd = {
-    enable = true;
+    enable = false;
     settings.General.EnableNetworkConfiguration = true;
   };
 
