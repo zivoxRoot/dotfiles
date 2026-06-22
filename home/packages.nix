@@ -23,6 +23,7 @@
     adwaita-icon-theme
     qutebrowser
     quickshell
+    hyprpicker
 
     # GUI applications
     telegram-desktop

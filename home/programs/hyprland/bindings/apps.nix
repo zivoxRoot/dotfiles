@@ -30,6 +30,9 @@
       "SUPER, PRINT, exec, screenshot window"
       "SHIFT, PRINT, exec, screenshot output"
       "SUPER_SHIFT, V, exec, edit-last-screenshot"
+
+      # Hyprpicker
+      "ALT, PRINT, exec, hyprpicker --autocopy --notify"
     ];
   };
 }
