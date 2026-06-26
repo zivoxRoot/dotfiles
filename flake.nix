@@ -21,16 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    stylix = {
-      url = "github:nix-community/stylix/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,13 +45,11 @@
   outputs =
     {
       self,
-      stylix,
       nvf,
       mangowm,
       nixpkgs,
       otter-launcher,
       fsel,
-      niri,
       home-manager,
       zen-browser,
       nixvim,
@@ -72,7 +60,6 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          stylix.nixosModules.stylix
           ./hosts/laptop/configuration.nix
 
           home-manager.nixosModules.home-manager

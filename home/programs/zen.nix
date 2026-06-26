@@ -190,8 +190,6 @@
     };
   };
 
-  stylix.targets.zen-browser.profileNames = [ config.home.username ];
-
   # Open files with the browser
   xdg.mimeApps =
     let

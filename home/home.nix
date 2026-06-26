@@ -27,14 +27,12 @@
     ./programs/hyprlock.nix
     ./programs/foot.nix
     ./programs/waybar.nix
-    # ./programs/sunsetr
     ./programs/mangowm
     ./programs/zsh
     ./programs/hyprland
     ./programs/espanso.nix
     ./programs/otter-launcher
     ./programs/clipse.nix
-    ./programs/niri
     ./programs/sioyek.nix
     ./programs/bash.nix
     ./programs/swaync.nix
