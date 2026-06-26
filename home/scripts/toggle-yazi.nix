@@ -7,8 +7,8 @@
       text = ''
         #!/usr/bin/env bash
 
-        if ! pgrep -f "foot.*yazi" >/dev/null; then
-            foot --app-id yazi yazi &
+        if ! pgrep -f "kitty.*yazi" >/dev/null; then
+            kitty --app-id yazi yazi &
             sleep 0.3
         fi
 

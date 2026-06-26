@@ -86,7 +86,7 @@
           ];
           tooltip = false;
           reverse-scrolling = true;
-          on-click = "foot --app-id=tui-app pulsemixer";
+          on-click = "kitty --app-id=tui-app pulsemixer";
         };
 
         "network" = {
@@ -106,7 +106,7 @@
           tooltip-format-wifi = " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}";
           tooltip-format-ethernet = " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}";
           tooltip-format-disconnected = "Disconnected";
-          on-click = "foot --app-id=tui-app impala";
+          on-click = "kitty --app-id=tui-app impala";
         };
 
         "bluetooth" = {
@@ -120,7 +120,7 @@
           tooltip-format-connected = "{controller_alias} {controller_address}\n{num_connections} connected\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias} {device_address}";
           tooltip-format-enumerate-connected-battery = "{device_alias} {device_battery_percentage}% {device_address}";
-          on-click = "foot --app-id=tui-app bluetui";
+          on-click = "kitty --app-id=tui-app bluetui";
         };
 
         "battery" = {

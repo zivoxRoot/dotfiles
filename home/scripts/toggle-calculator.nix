@@ -7,8 +7,8 @@
       text = ''
         #!/usr/bin/env bash
 
-        if ! pgrep -f "foot.*calculator" >/dev/null; then
-            foot --app-id calculator qalc &
+        if ! pgrep -f "kitty.*calculator" >/dev/null; then
+            kitty --app-id calculator qalc &
             sleep 0.3
         fi
 

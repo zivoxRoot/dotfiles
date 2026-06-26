@@ -25,7 +25,7 @@
     ./programs/nixvim.nix
     ./programs/ohmyposh.nix
     ./programs/hyprlock.nix
-    ./programs/foot.nix
+    ./programs/kitty.nix
     ./programs/waybar.nix
     ./programs/mangowm
     ./programs/zsh

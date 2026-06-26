@@ -2,9 +2,11 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "SUPER, T, exec, foot"
-      "SUPER, B, exec, zen-beta"
-      "SUPER, SPACE, exec, foot --app-id=otter-launcher otter-launcher"
+      "SUPER, T, exec, kitty"
+      # "SUPER, B, exec, zen-beta"
+      # "SUPER, SPACE, exec, foot --app-id=otter-launcher otter-launcher"
+      "SUPER, SPACE, exec, qs ipc call launcher toggle"
+      "SUPER, G, exec, qs ipc call wallpaper-switcher toggle"
       "SUPER, E, exec, toggle-yazi"
       "SUPER, M, exec, toggle-telegram"
       "SUPER, C, exec, toggle-calculator"

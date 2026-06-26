@@ -7,8 +7,8 @@
       text = ''
         #!/usr/bin/env bash
 
-        if ! pgrep -f "foot.*music-player" >/dev/null; then
-            foot --app-id music-player kew &
+        if ! pgrep -f "kitty.*music-player" >/dev/null; then
+            kitty --app-id music-player kew &
             sleep 0.3
         fi
 
